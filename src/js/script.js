@@ -7,7 +7,7 @@ function start() {
     numberOfFilms = +prompt("Сколько фильмов Вы уже посмотрели?", "");
   }
 }
-// start();
+start();
 
 console.log(numberOfFilms);
 
@@ -21,7 +21,7 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
-    const a = prompt("Один из последних просмотренных фильмов?", ""),
+    const a = prompt("Один из последних просмотренных фильмов?", "").trim(),
       b = +prompt("На сколько его оцените?", "");
 
     if (a != null && b != null && a != "" && b != "" && a.length < 50) {
@@ -33,7 +33,7 @@ function rememberMyFilms() {
     }
   }
 }
-// rememberMyFilms();
+rememberMyFilms();
 
 function detectPersonalLevel() {
   if (personalMovieDB.count < 10) {
@@ -47,8 +47,6 @@ function detectPersonalLevel() {
   }
 }
 detectPersonalLevel();
-
-// console.log(personalMovieDB);
 
 function showMyDB(object) {
   if (!object) {
